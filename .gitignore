@@ -1,4 +1,5 @@
 .vscode/
-venv_khalo/
+.venv_khalo/
 settings.py
 .archive/
+*settings.py*
