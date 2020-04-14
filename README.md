@@ -14,7 +14,7 @@ the heat lamps and light sources based on a user defined parameters.
 ### Webpage Interface App
 
 This will be the app that the user will interact with directly. This app will pull json data from
-the Temperature Monitor App, or maybe query it from the database, I do not know yet. 
+the Temperature Monitor App, or maybe query it from the database, I do not know yet.
 
 ### Video Stream App
 
