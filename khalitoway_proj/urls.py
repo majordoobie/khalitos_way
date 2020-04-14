@@ -1,7 +1,7 @@
-"""khalitos_way URL Configuration
+"""khalitoway_proj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('temp/', include('temperature_monitor_app.urls')),
+    path('monitor/', include('temperature_monitor_app.urls')),
 ]
