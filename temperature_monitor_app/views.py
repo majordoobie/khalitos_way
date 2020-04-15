@@ -8,13 +8,13 @@ from .models import TemperatureRead
 def index(request):    
     last_read = TemperatureRead.objects.latest('sample_date')
     last_read_dict = {
-        'Device': last_read.device_name,
-        'Date': last_read.sample_date,
-        'Temperature:': last_read.temperature,
-        'Humidity': last_read.humidity,
-        'Online': last_read.device_online
+        'device': last_read.device_name.device_name,
+        'date': last_read.sample_date.strftime("%d%b%y %H:%M").upper(),
+        'temp': f"{last_read.temperature}\N{DEGREE SIGN}",
+        'humid': f"{last_read.humidity}%",
+        'online': last_read.device_online
     }
-    return render(request, 'index.html', last_read_dict)
+    return render(request, 'index.html', {'temp_devices': last_read_dict})
 
 
 

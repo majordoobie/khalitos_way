@@ -1,1 +1,23 @@
-<h1>Hello World</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Device</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Online</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for temp_device in temp_devices %}            
+        <tr>
+            <td>{{ temp_device.date }}</td>
+            <td>{{ temp_device.device }}</td>
+            <td>{{ temp_device.temp }}</td>
+            <td>{{ temp_device.humid }}</td>
+            <td>{{ temp_device.online }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
