@@ -9,14 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        
         {% for temp_device in temp_devices %}            
         <tr>
-            <td>{{ temp_device.date }}</td>
-            <td>{{ temp_device.device }}</td>
-            <td>{{ temp_device.temp }}</td>
-            <td>{{ temp_device.humid }}</td>
-            <td>{{ temp_device.online }}</td>
+            <td>{{ temp_device.sample_date }}</td>
+            <td>{{ temp_device.device_name }}</td>
+            <td>{{ temp_device.temperature }}</td>
+            <td>{{ temp_device.humidity }}</td>
+            <td>{{ temp_device.device_online }}</td>
         </tr>
         {% endfor %}
     </tbody>
