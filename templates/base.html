@@ -1,20 +1,29 @@
-<!doctype html>
+{% load static %}<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>Kahlito's Way</title>
+    <!-- Font-->
+    <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <title>{% block title %}Khalo{% endblock %}</title>
   </head>
   <body>
+
     <!-- Navation bar-->
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar sticky-top navbar-dark" style="background-color: #FFA500;">
+      <a class="navbar-brand" href="#">
+        <img src="{% static "images/lizard0.jpg" %}" width="40" height="40" class="d-inline-block align-top" alt="">
+        Khalitos Way
+      </a>
+      
     </nav>
+
+
     <!-- jinja html goes in here-->
     <main class="container">
       {% block content %}

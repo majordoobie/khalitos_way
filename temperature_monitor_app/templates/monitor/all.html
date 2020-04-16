@@ -7,7 +7,7 @@ available on the base.html -->
 {% block content %}
     <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-            <h1 class="display-10 font-italic" align="center">{{ title|title }}</h1>
+            <h1 class="display-10 font-italic" align="center">{{ title }}</h1>
         </div>
   </div>
     <div class="table-responsive">
@@ -27,9 +27,7 @@ available on the base.html -->
                 <tr>
                     <td>{{ log.sample_date|date:"dMy"|upper }}</td>
                     <td>{{ log.sample_date|date:"Hi" }}</td>
-                    <td>
-                        <a href="{% url 'monitor_history' log.device_name %}">{{ log.device_name }}</a>
-                    </td>
+                    <td>{{ log.device_name }}</td>
                     <td>{{ log.temperature }}&#730</td>
                     <td>{{ log.humidity }}%</td>
                     <td>{{ log.device_online }}</td>
