@@ -3,20 +3,15 @@ from django.http import HttpResponse
 from django.forms.models import model_to_dict
 
 # User models in current app
-from .models import TemperatureRead
+from .models import TemperatureRead, TemperatureSensors
 
 def index(request):    
-    #last_read = []
-    #last_read.append(TemperatureRead.objects.latest('sample_date'))
-    last_read = TemperatureRead.objects.all()
-    # last_read_dict = {
-    #     'device': last_read.device_name.device_name,
-    #     'date': last_read.sample_date.strftime("%d%b%y %H:%M").upper(),
-    #     'temp': f"{last_read.temperature}\N{DEGREE SIGN}",
-    #     'humid': f"{last_read.humidity}%",
-    #     'online': last_read.device_online
-    # }
-    return render(request, 'monitor/index.html', {'temp_devices': last_read})
+    logs = TemperatureRead.objects.all().order_by('-sample_date')
+    return render(request, 'monitor/index.html', {'logs': logs})
 
 
+def history(request, device_name):
+    device = TemperatureSensors.objects.get(device_name=device_name)
+    history_data = TemperatureRead.objects.filter(device_name=device.device_name)
+    return render(request, 'monitor/index.html', {'logs': history_data})
 
