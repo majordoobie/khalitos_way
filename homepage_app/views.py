@@ -4,3 +4,4 @@ from django.forms.models import model_to_dict
 
 def index(request):
     return render(request, 'homepage/index.html')
+    

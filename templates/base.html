@@ -1,35 +1,50 @@
 {% load static %}<!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Font-->
     <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
-    <!-- Local CSS -->
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
-    <title>{% block title %}Khalo{% endblock %}</title>
+
+    <!-- Tab-->
+    <link rel="icon" href="{% static 'images/lizard0.jpg'%}">
+    <title>{% block title %}Khalo the Dragon{% endblock %}</title>
   </head>
   <body>
 
-    <!-- Navation bar-->
-    <nav class="navbar sticky-top navbar-dark" style="background-color: #FFA500;">
-      <a class="navbar-brand" href="#">
-        <img src="{% static "images/lizard0.jpg" %}" width="40" height="40" class="d-inline-block align-top" alt="">
-        Khalitos Way
-      </a>
-      
-    </nav>
+    <!-- Navigation Components -->
+    <nav class="navbar sticky-top navbar-light" style="background-color: #FFA500;">
+  		<div class="navbar-header">
 
+ 			  <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+         <img src="{% static "images/lizard0.jpg" %}" width="40" height="40">
+       </button>
+         <div class="navbar-brand navbar-brand-centered">Khalitos Way</div>
+    	</div>
+
+      <div class="collapse navbar-collapse" id="collapse_target">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- jinja html goes in here-->
     <main class="container">
       {% block content %}
       {% endblock %}
     </main>
-        
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

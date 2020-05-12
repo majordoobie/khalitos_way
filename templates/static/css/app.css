@@ -1,4 +1,22 @@
+.navbar button {
+	float: left;
+}
+
+.navbar-header {
+
+	width: 100%;
+	line-height: 45px;
+	text-align: center;
+    float: none;
+}
+
 .navbar-brand {
+
     font-family: 'Peralta', cursive;
     font-size: xx-large;
+    float: none;
+}
+
+.navbar-nav li a {
+    font-family: 'Peralta';
 }
