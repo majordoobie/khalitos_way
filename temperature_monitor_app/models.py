@@ -1,29 +1,39 @@
+
+from datetime import datetime
 from django.db import models
 from django import forms
 
-# class TimeSet(forms.Form):
-#     time_set = forms.TimeField(widget=forms.TimeInput(format='%H:%M'))
-
-class TemperatureSensors(models.Model):
+class DaytimeCycle(models.Model):
     """
-    The table registers the temperature device along with setting the
-    min max temperature in fahrenheit
+    These are the daytime parameters for all the sensors
+    """
+    daytime_start = models.TimeField(default=datetime.now().time().replace(hour=7, minute=0, second=0),
+                                     help_text="HH:MM:SS 24-Hour Format")
+    daytime_end = models.TimeField(default=datetime.now().time().replace(hour=19, minute=0, second=0),
+                                   help_text="HH:MM:SS 24-Hour Format")
+
+class TemperatureSensor(models.Model):
+    """
+    The table registers the temperature device along with setting the min max temperature in 
+    fahrenheit. The application will use the temperature based on the DaytimeCycle
     """
     device_name = models.CharField(max_length=30, primary_key=True)
-    max_temperature = models.FloatField(help_text="Temperature in fahrenheit")
-    min_temperature = models.FloatField(help_text="Temperature in fahrenheit")
+    # Day time paremeters
+    max_temperature_day = models.FloatField(help_text="Temperature in fahrenheit")
+    min_temperature_day = models.FloatField(help_text="Temperature in fahrenheit")
+    # Night time paaremters
+    max_temperature_night = models.FloatField(help_text="Temperature in fahrenheit")
+    min_temperature_night = models.FloatField(help_text="Temperature in fahrenheit")
 
     def __str__(self):
         return self.device_name
 
-class LightSensors(models.Model):
+class LightAccessory(models.Model):
     """
     Table registers the Light sensors along with setting the time of day in EST
     time that they should turn on or off
     """
     device_name = models.CharField(max_length=30, primary_key=True)
-    turn_on_start = models.TimeField(help_text="HH:MM:SS 24-Hour Format")
-    turn_on_end = models.TimeField(help_text="HH:MM:SS 24-Hour Format")
 
     def __str__(self):
         return self.device_name
@@ -33,7 +43,7 @@ class TemperatureRead(models.Model):
     Table updates periodically with the temperature readings. Will also attempt to
     report if the sensor is still communicating incase the sensor gets damaged
     """
-    device_name = models.ForeignKey(TemperatureSensors, on_delete=models.CASCADE)
+    device_name = models.ForeignKey(TemperatureSensor, on_delete=models.CASCADE)
     sample_date = models.DateTimeField(auto_now_add=True)
     
     # Data from sensors
@@ -50,7 +60,7 @@ class LightRead(models.Model):
     """
     Same as temperatureRead, but for the lights
     """
-    decice_name = models.ForeignKey(LightSensors, on_delete=models.CASCADE)
+    decice_name = models.ForeignKey(LightAccessory, on_delete=models.CASCADE)
     sample_date = models.DateTimeField(auto_now=True)
 
     # Status of the light
