@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import TemperatureSensor, LightAccessory
+from .models import TemperatureSensor, LightAccessory, DaytimeCycle
 
-class TemperatureSensorsAdmin(admin.ModelAdmin):
+class TemperatureSensorAdmin(admin.ModelAdmin):
     # List out the things you want to show in the admin page
     list_display = (
         'device_name',
@@ -11,11 +11,17 @@ class TemperatureSensorsAdmin(admin.ModelAdmin):
         'min_temperature_night'
     )
 
-class LightSensorsAdmin(admin.ModelAdmin):
+class LightAccessoryAdmin(admin.ModelAdmin):
     list_display = (
         'device_name',
     )
 
+class DaytimeCycleAdmin(admin.ModelAdmin):
+    list_display = (
+        'daytime_start',
+        'daytime_end'
+    )
 
-admin.site.register(TemperatureSensor, TemperatureSensorsAdmin)
-admin.site.register(LightAccessory, LightSensorsAdmin)
+admin.site.register(DaytimeCycle, DaytimeCycleAdmin)
+admin.site.register(TemperatureSensor, TemperatureSensorAdmin)
+admin.site.register(LightAccessory, LightAccessoryAdmin)
