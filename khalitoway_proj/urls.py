@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from temperature_monitor_app.views import doit
 
 urlpatterns = [
     path('', include('homepage_app.urls')),
@@ -23,5 +22,3 @@ urlpatterns = [
     # Any url that starts with monitor/ will be handles by this
     path('monitor/', include('temperature_monitor_app.urls')),
 ]
-
-doit(repeat=10, repeat_until=None)
