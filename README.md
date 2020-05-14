@@ -6,13 +6,14 @@ The application is essentially 3 pieces. The DJango webserver, the Pi monitor an
 
 ## Architecture
 
+```
     pi              db              Django
 ----------       ----------       ----------
 |        |       |        |       |        |
 |        |  <->  |        |  <->  |        |
 |        |       |        |       |        |
 ----------       ----------       ----------
-
+```
 
 ## Applications
 
