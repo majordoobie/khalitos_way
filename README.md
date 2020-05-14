@@ -1,7 +1,18 @@
 # Khalitos Way
 
-Khalitos way is a web server running on a pi. It is used to manage the temperatures of a bearded
-dragon cage. It also provides video feed to the users. 
+Khalitos Way is a webserver used to monitor the temperatures of a bearded dragon enclosure. 
+
+The application is essentially 3 pieces. The DJango webserver, the Pi monitor and the postgres database.
+
+## Architecture
+
+    pi              db              Django
+----------       ----------       ----------
+|        |       |        |       |        |
+|        |  <->  |        |  <->  |        |
+|        |       |        |       |        |
+----------       ----------       ----------
+
 
 ## Applications
 
