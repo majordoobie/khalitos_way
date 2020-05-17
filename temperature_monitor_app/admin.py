@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TemperatureSensor, LightAccessory, DaytimeCycle
+from .models import TemperatureSensor, Relay, DaytimeCycle
 
 class TemperatureSensorAdmin(admin.ModelAdmin):
     # List out the things you want to show in the admin page
@@ -9,14 +9,17 @@ class TemperatureSensorAdmin(admin.ModelAdmin):
         'min_temperature_day',
         'max_temperature_night',
         'min_temperature_night',
-        'sensor_type'
+        'sensor_type',
+        'gpio'
     )
 
-class LightAccessoryAdmin(admin.ModelAdmin):
+class RelayAdmin(admin.ModelAdmin):
     list_display = (
-        'device_name',
+        'relay_name',
+        'daytime',
+        'gpio',
+        'relay_state'
     )
-
 class DaytimeCycleAdmin(admin.ModelAdmin):
     list_display = (
         'daytime_start',
@@ -25,4 +28,4 @@ class DaytimeCycleAdmin(admin.ModelAdmin):
 
 admin.site.register(DaytimeCycle, DaytimeCycleAdmin)
 admin.site.register(TemperatureSensor, TemperatureSensorAdmin)
-admin.site.register(LightAccessory, LightAccessoryAdmin)
+admin.site.register(Relay, RelayAdmin)
