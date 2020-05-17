@@ -25,6 +25,15 @@ class TemperatureSensor(models.Model):
     max_temperature_night = models.FloatField(help_text="Temperature in fahrenheit")
     min_temperature_night = models.FloatField(help_text="Temperature in fahrenheit")
 
+    SENSORS = [
+        (11, "DHT11"),
+        (22, "DHT22")
+    ]
+    sensor_type = models.IntegerField(
+        choices=SENSORS,
+        default=11
+    )
+
     def __str__(self):
         return self.device_name
 

@@ -8,7 +8,8 @@ class TemperatureSensorAdmin(admin.ModelAdmin):
         'max_temperature_day',
         'min_temperature_day',
         'max_temperature_night',
-        'min_temperature_night'
+        'min_temperature_night',
+        'sensor_type'
     )
 
 class LightAccessoryAdmin(admin.ModelAdmin):
