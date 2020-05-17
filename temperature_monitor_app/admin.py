@@ -17,6 +17,7 @@ class RelayAdmin(admin.ModelAdmin):
     list_display = (
         'relay_name',
         'daytime',
+        'control',
         'gpio',
         'relay_state'
     )

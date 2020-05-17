@@ -1,46 +1,86 @@
-2020-05-17 14:41:02,191:DEBUG:root: Starting loop
-2020-05-17 14:41:02,191:DEBUG:root: Sleeping for 4
-2020-05-17 14:41:03,193:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:03,198:DEBUG:root: DB connection acquired
-2020-05-17 14:41:03,201:DEBUG:root.sql: Getting sensors
-2020-05-17 14:41:06,270:DEBUG:root.sql: Temperature Hotside recorded
-2020-05-17 14:41:06,806:DEBUG:root.sql: Temperature Coolside recorded
-2020-05-17 14:41:06,814:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:06,819:DEBUG:root.sql: Getting relays
-2020-05-17 14:41:06,820:DEBUG:root: Sleeping for 4
-2020-05-17 14:41:07,821:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:07,826:DEBUG:root: DB connection acquired
-2020-05-17 14:41:07,827:DEBUG:root.sql: Getting sensors
-2020-05-17 14:41:08,355:DEBUG:root.sql: Temperature Hotside recorded
-2020-05-17 14:41:08,890:DEBUG:root.sql: Temperature Coolside recorded
-2020-05-17 14:41:08,898:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:08,905:DEBUG:root.sql: Getting relays
-2020-05-17 14:41:08,906:DEBUG:root: Sleeping for 4
-2020-05-17 14:41:09,908:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:09,914:DEBUG:root: DB connection acquired
-2020-05-17 14:41:09,916:DEBUG:root.sql: Getting sensors
-2020-05-17 14:41:10,445:DEBUG:root.sql: Temperature Hotside recorded
-2020-05-17 14:41:13,504:DEBUG:root.sql: Temperature Coolside recorded
-2020-05-17 14:41:13,517:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:13,527:DEBUG:root.sql: Getting relays
-2020-05-17 14:41:13,528:DEBUG:root: Sleeping for 4
-2020-05-17 14:41:14,530:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:14,536:DEBUG:root: DB connection acquired
-2020-05-17 14:41:14,540:DEBUG:root.sql: Getting sensors
-2020-05-17 14:41:17,597:DEBUG:root.sql: Temperature Hotside recorded
-2020-05-17 14:41:18,130:DEBUG:root.sql: Temperature Coolside recorded
-2020-05-17 14:41:18,139:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:18,147:DEBUG:root.sql: Getting relays
-2020-05-17 14:41:18,148:DEBUG:root: Sleeping for 4
-2020-05-17 14:41:19,149:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:19,154:DEBUG:root: DB connection acquired
-2020-05-17 14:41:19,156:DEBUG:root.sql: Getting sensors
-2020-05-17 14:41:19,684:DEBUG:root.sql: Temperature Hotside recorded
-2020-05-17 14:41:20,218:DEBUG:root.sql: Temperature Coolside recorded
-2020-05-17 14:41:20,226:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:20,231:DEBUG:root.sql: Getting relays
-2020-05-17 14:41:20,231:DEBUG:root: Starting loop
-2020-05-17 14:41:20,232:DEBUG:root: Sleeping for 4
-2020-05-17 14:41:21,233:DEBUG:root: Attempting to get DB connection
-2020-05-17 14:41:21,238:DEBUG:root: DB connection acquired
-2020-05-17 14:41:21,239:DEBUG:root.sql: Getting sensors
+2020-05-17 15:32:47,935:DEBUG:root: Starting loop
+2020-05-17 15:32:47,936:DEBUG:root: Sleeping for 3
+2020-05-17 15:33:47,955:DEBUG:root: Attempting to get DB connection
+2020-05-17 15:33:47,961:DEBUG:root: DB connection acquired
+2020-05-17 15:33:47,963:DEBUG:root.sql: Getting sensors
+2020-05-17 15:33:48,496:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 15:33:49,031:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 15:33:49,039:DEBUG:root: Attempting to get DB connection for relays
+2020-05-17 15:33:49,044:DEBUG:root: DB connection acquired
+2020-05-17 15:33:49,047:DEBUG:root.sql: Getting relays
+2020-05-17 15:33:49,048:DEBUG:root: Testing true | light | True
+2020-05-17 15:33:49,048:INFO:root: Set true | light | True to True
+2020-05-17 15:33:49,049:DEBUG:root: Setting GPIO for usage
+2020-05-17 15:33:49,049:DEBUG:root: Checking if GPIO needs to be changed
+2020-05-17 15:33:49,049:INFO:root: GPIO does not need to be changed, cleaning then exiting function
+2020-05-17 15:33:49,050:DEBUG:root: Sleeping for 2
+2020-05-17 15:34:49,110:DEBUG:root: Attempting to get DB connection
+2020-05-17 15:34:49,115:DEBUG:root: DB connection acquired
+2020-05-17 15:34:49,117:DEBUG:root.sql: Getting sensors
+2020-05-17 15:34:52,174:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 15:34:52,708:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 15:34:52,716:DEBUG:root: Attempting to get DB connection for relays
+2020-05-17 15:34:52,721:DEBUG:root: DB connection acquired
+2020-05-17 15:34:52,724:DEBUG:root.sql: Getting relays
+2020-05-17 15:34:52,724:DEBUG:root: Testing true | light | True
+2020-05-17 15:34:52,725:INFO:root: Set true | light | True to True
+2020-05-17 15:34:52,725:DEBUG:root: Setting GPIO for usage
+2020-05-17 15:34:52,726:DEBUG:root: Checking if GPIO needs to be changed
+2020-05-17 15:34:52,726:INFO:root: GPIO does not need to be changed, cleaning then exiting function
+2020-05-17 15:34:52,726:DEBUG:root: Sleeping for 1
+2020-05-17 15:35:52,733:DEBUG:root: Attempting to get DB connection
+2020-05-17 15:35:52,744:DEBUG:root: DB connection acquired
+2020-05-17 15:35:52,749:DEBUG:root.sql: Getting sensors
+2020-05-17 15:35:53,278:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 15:35:53,814:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 15:35:53,822:DEBUG:root: Attempting to get DB connection for relays
+2020-05-17 15:35:53,826:DEBUG:root: DB connection acquired
+2020-05-17 15:35:53,829:DEBUG:root.sql: Getting relays
+2020-05-17 15:35:53,830:DEBUG:root: Testing true | light | True
+2020-05-17 15:35:53,831:INFO:root: Set true | light | True to True
+2020-05-17 15:35:53,831:DEBUG:root: Setting GPIO for usage
+2020-05-17 15:35:53,832:DEBUG:root: Checking if GPIO needs to be changed
+2020-05-17 15:35:53,832:INFO:root: GPIO does not need to be changed, cleaning then exiting function
+2020-05-17 15:35:53,833:DEBUG:root: Starting loop
+2020-05-17 15:35:53,833:DEBUG:root: Sleeping for 5
+2020-05-17 15:36:53,883:DEBUG:root: Attempting to get DB connection
+2020-05-17 15:36:53,890:DEBUG:root: DB connection acquired
+2020-05-17 15:36:53,894:DEBUG:root.sql: Getting sensors
+2020-05-17 15:36:54,424:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 15:36:57,485:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 15:36:57,494:DEBUG:root: Attempting to get DB connection for relays
+2020-05-17 15:36:57,501:DEBUG:root: DB connection acquired
+2020-05-17 15:36:57,506:DEBUG:root.sql: Getting relays
+2020-05-17 15:36:57,507:DEBUG:root: Testing true | light | True
+2020-05-17 15:36:57,508:INFO:root: Set true | light | True to True
+2020-05-17 15:36:57,509:DEBUG:root: Setting GPIO for usage
+2020-05-17 15:36:57,511:DEBUG:root: Checking if GPIO needs to be changed
+2020-05-17 15:36:57,512:INFO:root: GPIO does not need to be changed, cleaning then exiting function
+2020-05-17 15:36:57,513:DEBUG:root: Sleeping for 4
+2020-05-17 15:37:57,573:DEBUG:root: Attempting to get DB connection
+2020-05-17 15:37:57,580:DEBUG:root: DB connection acquired
+2020-05-17 15:37:57,582:DEBUG:root.sql: Getting sensors
+2020-05-17 15:37:58,110:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 15:37:58,647:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 15:37:58,657:DEBUG:root: Attempting to get DB connection for relays
+2020-05-17 15:37:58,663:DEBUG:root: DB connection acquired
+2020-05-17 15:37:58,667:DEBUG:root.sql: Getting relays
+2020-05-17 15:37:58,668:DEBUG:root: Testing true | light | True
+2020-05-17 15:37:58,669:INFO:root: Set true | light | True to True
+2020-05-17 15:37:58,669:DEBUG:root: Setting GPIO for usage
+2020-05-17 15:37:58,670:DEBUG:root: Checking if GPIO needs to be changed
+2020-05-17 15:37:58,672:INFO:root: GPIO does not need to be changed, cleaning then exiting function
+2020-05-17 15:37:58,673:DEBUG:root: Sleeping for 3
+2020-05-17 15:38:58,679:DEBUG:root: Attempting to get DB connection
+2020-05-17 15:38:58,686:DEBUG:root: DB connection acquired
+2020-05-17 15:38:58,690:DEBUG:root.sql: Getting sensors
+2020-05-17 15:38:59,219:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 15:38:59,754:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 15:38:59,763:DEBUG:root: Attempting to get DB connection for relays
+2020-05-17 15:38:59,770:DEBUG:root: DB connection acquired
+2020-05-17 15:38:59,775:DEBUG:root.sql: Getting relays
+2020-05-17 15:38:59,776:DEBUG:root: Testing true | light | True
+2020-05-17 15:38:59,777:INFO:root: Set true | light | True to True
+2020-05-17 15:38:59,777:DEBUG:root: Setting GPIO for usage
+2020-05-17 15:38:59,780:DEBUG:root: Checking if GPIO needs to be changed
+2020-05-17 15:38:59,781:INFO:root: GPIO does not need to be changed, cleaning then exiting function

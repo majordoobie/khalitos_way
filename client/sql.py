@@ -58,5 +58,14 @@ class Sql:
         cur.close()
         return results
 
+    def set_relay_state(self, relay):
+        cur = self.conn.cursor()
+        sql = """UPDATE temperature_monitor_app_relay SET relay_state=(%s) WHERE
+        relay_name = (%s)"""
+        cur.execute(sql, (relay.relay_state, relay.relay_name))
+        self.log.debug(f"Relay state {relay} changed")
+        self.conn.commit()
+        cur.close()
+        return
     def close(self):
         self.conn.close()

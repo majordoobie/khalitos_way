@@ -13,6 +13,11 @@ CYCLE = [
     (True, "Daytime"),
     (False, "Night time")
 ]
+
+CONTROL = [
+    ("light", "Lights"),
+    ("heat", "Heat Lamp")
+]
 class DaytimeCycle(models.Model):
     """
     These are the daytime parameters for all the sensors
@@ -53,9 +58,17 @@ class Relay(models.Model):
         default=True,
         help_text="Should this relay power on during the day or night?"
     ) 
+    control = models.CharField(
+        choices=CONTROL,
+        help_text="Will this relay control lights or heat?",
+        max_length=30,
+        default="light"
+    )
     gpio = models.IntegerField(help_text="GPIO number, not the PIN!", default=-1)
     relay_state = models.BooleanField(default=False)
 
+    def __str__(self):
+        return f"{self.relay_name} | {self.control}"
 
 class TemperatureRead(models.Model):
     """

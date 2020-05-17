@@ -29,11 +29,13 @@ class DaytimeCycle:
         else:
             return False
 
-
-
 class Relay:
-    def __init__(self, relay_name, daytime, gpio, relay_state):
+    def __init__(self, relay_name, daytime, gpio, relay_state, control):
         self.relay_name = relay_name
         self.daytime = daytime
         self.gpio = gpio
+        self.control = control
         self.relay_state = relay_state
+    
+    def __str__(self):
+        return f"{self.relay_name} | {self.control} | {self.relay_state}"
