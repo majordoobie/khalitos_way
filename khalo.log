@@ -1,0 +1,46 @@
+2020-05-17 14:41:02,191:DEBUG:root: Starting loop
+2020-05-17 14:41:02,191:DEBUG:root: Sleeping for 4
+2020-05-17 14:41:03,193:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:03,198:DEBUG:root: DB connection acquired
+2020-05-17 14:41:03,201:DEBUG:root.sql: Getting sensors
+2020-05-17 14:41:06,270:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 14:41:06,806:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 14:41:06,814:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:06,819:DEBUG:root.sql: Getting relays
+2020-05-17 14:41:06,820:DEBUG:root: Sleeping for 4
+2020-05-17 14:41:07,821:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:07,826:DEBUG:root: DB connection acquired
+2020-05-17 14:41:07,827:DEBUG:root.sql: Getting sensors
+2020-05-17 14:41:08,355:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 14:41:08,890:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 14:41:08,898:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:08,905:DEBUG:root.sql: Getting relays
+2020-05-17 14:41:08,906:DEBUG:root: Sleeping for 4
+2020-05-17 14:41:09,908:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:09,914:DEBUG:root: DB connection acquired
+2020-05-17 14:41:09,916:DEBUG:root.sql: Getting sensors
+2020-05-17 14:41:10,445:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 14:41:13,504:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 14:41:13,517:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:13,527:DEBUG:root.sql: Getting relays
+2020-05-17 14:41:13,528:DEBUG:root: Sleeping for 4
+2020-05-17 14:41:14,530:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:14,536:DEBUG:root: DB connection acquired
+2020-05-17 14:41:14,540:DEBUG:root.sql: Getting sensors
+2020-05-17 14:41:17,597:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 14:41:18,130:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 14:41:18,139:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:18,147:DEBUG:root.sql: Getting relays
+2020-05-17 14:41:18,148:DEBUG:root: Sleeping for 4
+2020-05-17 14:41:19,149:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:19,154:DEBUG:root: DB connection acquired
+2020-05-17 14:41:19,156:DEBUG:root.sql: Getting sensors
+2020-05-17 14:41:19,684:DEBUG:root.sql: Temperature Hotside recorded
+2020-05-17 14:41:20,218:DEBUG:root.sql: Temperature Coolside recorded
+2020-05-17 14:41:20,226:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:20,231:DEBUG:root.sql: Getting relays
+2020-05-17 14:41:20,231:DEBUG:root: Starting loop
+2020-05-17 14:41:20,232:DEBUG:root: Sleeping for 4
+2020-05-17 14:41:21,233:DEBUG:root: Attempting to get DB connection
+2020-05-17 14:41:21,238:DEBUG:root: DB connection acquired
+2020-05-17 14:41:21,239:DEBUG:root.sql: Getting sensors
