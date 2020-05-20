@@ -26,13 +26,14 @@ class KhaloClient:
 
     def start(self):
         self.log.debug("Starting loop")
-        count = 0
-        while count < 3:
-            count +=1
+#        count = -1
+#        while count < 3:
+        while True:
+            #count +=1
             sleep_for = sleep_time()
-            self.log.debug(f"Sleeping for {sleep_for}")
-            #sleep(sleep_for)
-            sleep(60)
+            self.log.debug(f"Sleeping for {sleep_for} minutes")
+            sleep(sleep_for * 60)
+            #sleep(60)
             self.log_temps()
             self.check_relays()
 
