@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+    db:
+        image: postgres:12.1-alpine
+        container_name: "khalo_db"
+        ports:
+            - ${PORT_TRANSLATION}
+        volumes: 
+            - khalo_db_volume:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: ${USERNAME}
+            POSTGRES_PASSWORD: ${PASSWORD}
+            POSTGRES_DB: ${DATABASE}
+            PGDATA: /var/lib/postgresql/data
+    web: 
+        container_name: "khalo_web"
+        build: .  
+        #command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - /home/todoroki/code/khalitos_way/webapp:/code
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+        env_file:
+            - ./.env
+volumes:
+        khalo_db_volume:

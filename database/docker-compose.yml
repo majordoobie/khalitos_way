@@ -6,7 +6,7 @@ services:
     ports:
       - ${PORT_TRANSLATION}
     volumes:
-      - /home/todoroki/khalitos_way/database/pg_data:/var/lib/postgresql/data
+      - /home/todoroki/code/khalitos_way/database/pg_data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: ${USERNAME}
       POSTGRES_PASSWORD: ${PASSWORD}
